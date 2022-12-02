@@ -15,8 +15,18 @@
 margin-left: 570px;
 }	
 
+*{
+  padding: none;
+  margin: none;
+  border: none;
+}
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
 	body{
-             height: 600px;
              background-image: linear-gradient(#0a4d7a, #053825);
               background-repeat: no-repeat;
               background-size: cover;
@@ -24,19 +34,36 @@ margin-left: 570px;
 .titleImage {margin-left: 900px;}
 
 .playButton {
+  position: flex;
+  cursor: pointer;
   background-color: #fcba03; 
   color: black; 
   border: 2px solid #fcdf03;
   font-size: 40px;
   border-radius: 8px;
+  transition: all 0.5s;
 }
 
+.playButton:hover {
+  border-color: #3e8e41;
+  border: 5px solid #3e8e41;
+}
+
+.container {
+  justify-items: center;
+}
 
 .column {
+  justify-content: center;
   float: left;
+  margin-left: 14vmax;
+  margin-right: 5vmax;
+  position: relative;
+  display: flex;
   width: 33.33%;
+  max-width: 350px;
+  max-height: 350px;
   padding: 5px;
-  margin-left: 300;
 }
 
 
@@ -57,7 +84,7 @@ margin-left: 570px;
 }
 
 .serverList {
-  position: relative;
+  position: absolute;
   display: inline-block;
 }
 
@@ -95,33 +122,39 @@ margin-left: 570px;
 <body>
 
 
-		<button class="button playButton">Play</button>
+		<button class="button playButton" id="playButton">Play</button>
 
 
 
 		<div class = "nicknameInput">
 			<p><input type="text" value="" placeholder="NickName"></p>
 		</div>
-
-<div class="serverList">
-  <button class="serverListbtn">Server</button>
-  <div class="serverList-content">
-  <a href="#">Na 1</a>
-  <a href="#">Na 2</a>
-  <a href="#">Knicker</a>
+<div class="container" style="">
+  <div class="serverList">
+    <button class="serverListbtn">Server</button>
+    <div class="serverList-content">
+    <a href="#">Na 1</a>
+    <a href="#">Na 2</a>
+    <a href="#">Knicker</a>
+    </div>
   </div>
-</div>
-	
-
-<div class="row">
   <div class="column">
     <img src="https://i.imgur.com/85TgORS.png" alt="Bob" style="width:100%">
   </div>
   <div class="column">
-    <img src="https://i.imgur.com/5OtOhn0.png" alt="Monkey With Hammer" style="width:100%">
+    <img src="https://i.imgur.com/5OtOhn0.png" alt="Monkey With Hammer" style="width:100%;">
   </div>
 </div>
+	
 
+<script>
+
+  const playButton = document.querySelector("#playButton");
+  playButton.addEventListener("click", e => {
+    alert("no game yet XD");
+  });
+
+</script>
 
 	</body>
 
