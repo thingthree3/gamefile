@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Perky.ioAAA</title>
+	<style>
+		.Title {text-align:center;}
+		.Title {font-size: 38px;}
+		.Title {color: #ffd000;}
+
+		
+	.playButton {margin-left: 625px;}
+	
+
+	.nicknameInput {margin-left: 570px;}
+
+	body{
+             height: 600px;
+             background-image: linear-gradient(#0a4d7a, #053825);
+              background-repeat: no-repeat;
+              background-size: cover;
+         }
+</style>
+
+<div class = Title> <h1> Perky.io </h1> </div>
+	
+<body>
+
+	<div class = "playButton">
+		<button onclick="play()">Play</button>
+
+	</div>
+
+		<div class = "nicknameInput">
+			<p><input type="text" value="Nickname"></p>
+		</div>
+
+	
+	</body>
+
+
+
+
+	</head>
+</html>
