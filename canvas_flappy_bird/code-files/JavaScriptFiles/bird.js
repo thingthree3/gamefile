@@ -65,7 +65,11 @@ class Bird{
         }
 
         //handle pipe and ground collisions
-        if(!pipes.every(pipe => !this.isCollidingWith(pipe)) || this.y > this.game.background.groundPosition - this.height){
+        if(
+            !pipes.every(pipe => !this.isCollidingWith(pipe))||
+            this.y > this.game.background.groundPosition - this.height||
+            this.y <= 0
+        ){
             this.game.isGameover = true;
         }
 
